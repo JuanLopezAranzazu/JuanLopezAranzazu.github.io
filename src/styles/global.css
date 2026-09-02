@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+:root {
+  --color-bg: #10161c;
+  --color-ink: #ece9e1;
+  --color-ink-muted: #8b9199;
+
+  --color-accent: #5fa98c;
+  --color-accent-soft: #1c2a25;
+  --color-accent-strong: #3f7d67;
+
+  --color-accent-warm: #e0954d;
+  --color-accent-warm-soft: #2a2119;
+  
+  --color-border: #232b32;
+}
+
+html {
+  scroll-behavior: smooth;
+}

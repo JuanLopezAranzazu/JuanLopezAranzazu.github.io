@@ -1,0 +1,37 @@
+---
+import content from "../data/content.json";
+const { contact, profile } = content;
+---
+
+<section id="contacto" class="max-w-5xl mx-auto px-6 sm:px-8 py-32 border-t border-[var(--color-border)]">
+  <div class="max-w-xl">
+    <h2 class="text-4xl sm:text-5xl font-medium tracking-tight mb-6 text-[var(--color-ink)]">
+      {contact.heading}
+    </h2>
+    <p class="text-lg text-[var(--color-ink-muted)] leading-relaxed mb-10">
+      {contact.text}
+    </p>
+    <div class="flex flex-wrap gap-3">
+      {
+        contact.socials.map((s, i) => (
+          <a
+            href={s.href}
+            class={`text-sm font-medium rounded-full px-4 py-2 transition-colors ${
+              i === 0
+                ? "bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-strong)]"
+                : "bg-[var(--color-accent-warm-soft)] text-[var(--color-accent-warm)] hover:bg-[var(--color-accent-warm)] hover:text-white"
+            }`}
+          >
+            {s.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<footer class="max-w-5xl mx-auto px-6 sm:px-8 pb-10">
+  <p class="text-sm text-[var(--color-ink-muted)]">
+    © {new Date().getFullYear()} {profile.name}. Hecho con Astro + Tailwind.
+  </p>
+</footer>

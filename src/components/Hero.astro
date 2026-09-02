@@ -1,0 +1,33 @@
+---
+import content from "../data/content.json";
+const { profile } = content;
+---
+
+<section class="max-w-5xl mx-auto px-6 sm:px-8 pt-40 pb-24">
+  <p class="text-sm text-[var(--color-accent-warm)] font-medium mb-6">{profile.greeting}</p>
+  <h1 class="text-5xl sm:text-7xl font-medium tracking-tight leading-[1.05] mb-8 text-[var(--color-ink)]">
+    {profile.name}.<br />
+    <span class="text-[var(--color-accent)]">{profile.role}</span>
+  </h1>
+  <p class="text-lg text-[var(--color-ink-muted)] max-w-xl leading-relaxed">
+    {profile.tagline}
+  </p>
+</section>
+
+<section id="about" class="max-w-5xl mx-auto px-6 sm:px-8 py-24 border-t border-[var(--color-border)]">
+  <div class="grid sm:grid-cols-[200px_1fr] gap-8 sm:gap-16">
+    <div class="flex items-center gap-2 h-fit">
+      <span class="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
+      <h2 class="text-sm text-[var(--color-ink)] font-medium">Sobre mí</h2>
+    </div>
+    <div class="max-w-2xl">
+      {
+        profile.about.map((paragraph) => (
+          <p class="text-xl leading-relaxed text-[var(--color-ink)]/80 mt-6 first:mt-0">
+            {paragraph}
+          </p>
+        ))
+      }
+    </div>
+  </div>
+</section>

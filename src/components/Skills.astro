@@ -1,0 +1,29 @@
+---
+import content from "../data/content.json";
+const { skills: skillGroups } = content;
+---
+
+<section id="skills" class="max-w-5xl mx-auto px-6 sm:px-8 py-24 border-t border-[var(--color-border)]">
+  <div class="grid sm:grid-cols-[200px_1fr] gap-8 sm:gap-16">
+    <div class="flex items-center gap-2 h-fit">
+      <span class="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
+      <h2 class="text-sm text-[var(--color-ink)] font-medium">Skills</h2>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 max-w-2xl">
+      {
+        skillGroups.map((group) => (
+          <div>
+            <h3 class="text-sm font-medium mb-4 text-[var(--color-accent-warm)]">
+              {group.category}
+            </h3>
+            <ul class="flex flex-col gap-2">
+              {group.items.map((item) => (
+                <li class="text-[var(--color-ink)]/80">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,19 +1,22 @@
 ---
-import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import Contact from "../components/Contact.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-		<div class="bg-gray-100 min-h-screen flex items-center justify-center">
-    	<h1 class="text-4xl font-bold text-blue-600">Astro</h1>
-		</div>
-  </body>
-</html>
+<Layout>
+  <Nav />
+  <main>
+    <Hero />
+    <Projects />
+    <Skills />
+    <Experience />
+    <Education />
+    <Contact />
+  </main>
+</Layout>

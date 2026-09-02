@@ -1,0 +1,183 @@
+{
+  "profile": {
+    "name": "Juan Lopez",
+    "role": "Estudiante de Ingeniería de Sistemas & Desarrollador de Software",
+    "greeting": "Hola, soy",
+    "tagline": "Construyo aplicaciones web y soluciones de software, con especial interés en inteligencia artificial, desarrollo backend y tecnologías cloud.",
+    "about": [
+      "Soy estudiante de Ingeniería de Sistemas en la Universidad del Valle y me interesa el desarrollo de software, la inteligencia artificial y la construcción de aplicaciones que resuelvan problemas reales.",
+      "He trabajado en proyectos académicos y personales utilizando tecnologías como TypeScript, React, Angular, Node.js, Python, FastAPI, PostgreSQL, Docker y AWS. Actualmente también exploro aplicaciones de IA generativa y sistemas basados en RAG.",
+      "Me gusta aprender nuevas tecnologías construyendo proyectos y buscando buenas prácticas de arquitectura, testing, automatización y despliegue."
+    ]
+  },
+
+  "nav": [
+    {
+      "href": "#about",
+      "label": "Sobre mí"
+    },
+    {
+      "href": "#proyectos",
+      "label": "Proyectos"
+    },
+    {
+      "href": "#skills",
+      "label": "Skills"
+    },
+    {
+      "href": "#experiencia",
+      "label": "Experiencia"
+    },
+    {
+      "href": "#educacion",
+      "label": "Educación"
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Codelabs — Desarrollo de Software",
+      "description": "Colección de proyectos académicos enfocados en desarrollo backend con Java, APIs REST, pruebas automatizadas y arquitecturas basadas en microservicios.",
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "REST API",
+        "JUnit",
+        "Microservices",
+        "Eureka",
+        "RabbitMQ"
+      ],
+      "link": "https://github.com/JuanLopezAranzazu/codelabs-ds3"
+    },
+    {
+      "title": "Codelabs — Proyecto Integrador Obligatorios",
+      "description": "Colección de proyectos académicos desarrollados con Python, explorando desarrollo de APIs, inteligencia artificial, visión por computador y automatización.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "REST API",
+        "YOLO",
+        "Computer Vision",
+        "Web Scraping"
+      ],
+      "link": "https://github.com/JuanLopezAranzazu/codelabs-proyecto-integrador2-obligatorios"
+    },
+    {
+      "title": "Codelabs — Proyecto Integrador Opcionales",
+      "description": "Colección de proyectos complementarios desarrollados para explorar diferentes herramientas y tecnologías de Python.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "REST API",
+        "YOLO",
+        "Computer Vision",
+        "Web Scraping"
+      ],
+      "link": "https://github.com/JuanLopezAranzazu/codelabs-proyecto-integrador2-opcionales"
+    },
+    {
+      "title": "Monitoreo Ambiental IoT",
+      "description": "Sistema de monitoreo ambiental desarrollado con ESP32-S3 que recopila datos de sensores y los transmite mediante MQTT. La solución utiliza EMQX como broker, Node.js para el procesamiento y un bot de Telegram para consultar y recibir información del sistema.",
+      "tags": ["ESP32-S3", "MQTT", "EMQX", "Node.js", "Telegram"],
+      "link": "https://github.com/JuanLopezAranzazu/proyecto-integrador2-iot-bot"
+    },
+    {
+      "title": "freeCodeCamp — Backend & APIs",
+      "description": "Colección de proyectos desarrollados durante la formación en desarrollo backend, APIs REST y servicios web con Node.js y Express.",
+      "tags": ["JavaScript", "Node.js", "Express", "REST API"],
+      "link": "https://github.com/JuanLopezAranzazu/back-end-development-and-apis"
+    },
+    {
+      "title": "freeCodeCamp — Web & Bases de Datos",
+      "description": "Colección de proyectos enfocados en desarrollo web con HTML, CSS y JavaScript, junto con proyectos de bases de datos relacionales y SQL.",
+      "tags": ["HTML", "CSS", "JavaScript", "SQL", "Bases de datos"],
+      "link": "https://github.com/JuanLopezAranzazu/freecodecamp-projects"
+    }
+  ],
+
+  "skills": [
+    {
+      "category": "Lenguajes",
+      "items": ["TypeScript", "JavaScript", "Python", "Java", "C++"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["React", "Angular", "Next.js", "Vue.js", "Astro", "TailwindCSS"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express", "Spring Boot", "FastAPI", "Flask"]
+    },
+    {
+      "category": "Bases de datos",
+      "items": ["PostgreSQL", "MySQL", "MongoDB", "SQLite"]
+    },
+    {
+      "category": "Herramientas",
+      "items": [
+        "Git",
+        "Docker",
+        "AWS",
+        "GitHub Actions",
+        "Postman",
+        "VS Code",
+        "Intellij IDEA"
+      ]
+    }
+  ],
+
+  "experience": [
+    {
+      "role": "Aprendiz en prácticas",
+      "company": "OL Software",
+      "period": "abr. 2022 - sept. 2022",
+      "description": "Participé en el desarrollo de una aplicación web para la gestión de empleados y procesos del área de Recursos Humanos."
+    },
+    {
+      "role": "Estudiante de Ingeniería de Sistemas",
+      "company": "Universidad del Valle",
+      "period": "Actualidad",
+      "description": "Formación en ingeniería de software, desarrollo de aplicaciones, bases de datos, inteligencia artificial, arquitectura de software y tecnologías de infraestructura."
+    },
+    {
+      "role": "Proyecto de Trabajo de Grado",
+      "company": "Universidad del Valle",
+      "period": "Actualidad",
+      "description": "Desarrollo de una herramienta inteligente basada en IA generativa para la personalización del aprendizaje de programación funcional."
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Tecnólogo en Sistemas de Información",
+      "institution": "Universidad del Valle",
+      "period": "feb. 2019 — dic. 2022",
+      "description": "Formación en desarrollo de software, bases de datos, sistemas de información y fundamentos de ingeniería de software."
+    },
+    {
+      "degree": "Ingeniería de Sistemas",
+      "institution": "Universidad del Valle",
+      "period": "ago. 2023 — Actualidad",
+      "description": "Formación profesional orientada al desarrollo de software, arquitectura de sistemas, inteligencia artificial y tecnologías de la información."
+    }
+  ],
+
+  "contact": {
+    "heading": "Hablemos.",
+    "text": "¿Tienes un proyecto, una idea o simplemente quieres conectar? Puedes encontrarme en GitHub o LinkedIn.",
+    "socials": [
+      {
+        "label": "Email",
+        "href": "mailto:juanlopezaranzazu@gmail.com"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/JuanLopezAranzazu"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://linkedin.com/in/juan-esteban-lópez-aránzazu-691589187/"
+      }
+    ]
+  }
+}

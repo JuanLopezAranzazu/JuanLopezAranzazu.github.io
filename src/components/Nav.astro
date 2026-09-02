@@ -1,0 +1,32 @@
+---
+import content from "../data/content.json";
+const { nav: links, profile } = content;
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/85 backdrop-blur-sm border-b border-[var(--color-border)]">
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 py-5 flex items-center justify-between">
+    <a href="#" class="text-sm font-medium tracking-tight text-[var(--color-ink)]">
+      {profile.name}
+    </a>
+    <ul class="hidden sm:flex items-center gap-8">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] transition-colors"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <a
+      href="#contacto"
+      class="text-sm font-medium bg-[var(--color-accent)] text-white rounded-full px-4 py-1.5 hover:bg-[var(--color-accent-strong)] transition-colors"
+    >
+      Contacto
+    </a>
+  </div>
+</nav>
