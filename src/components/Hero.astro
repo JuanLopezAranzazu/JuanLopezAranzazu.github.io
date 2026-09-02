@@ -1,6 +1,12 @@
 ---
-import content from "../data/content.json";
-const { profile } = content;
+import { getContent, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const { profile } = getContent(lang);
+const aboutLabel = lang === "es" ? "Sobre mí" : "About me";
 ---
 
 <section class="max-w-5xl mx-auto px-6 sm:px-8 pt-40 pb-24">
@@ -18,7 +24,7 @@ const { profile } = content;
   <div class="grid sm:grid-cols-[200px_1fr] gap-8 sm:gap-16">
     <div class="flex items-center gap-2 h-fit">
       <span class="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
-      <h2 class="text-sm text-[var(--color-ink)] font-medium">Sobre mí</h2>
+      <h2 class="text-sm text-[var(--color-ink)] font-medium">{aboutLabel}</h2>
     </div>
     <div class="max-w-2xl">
       {

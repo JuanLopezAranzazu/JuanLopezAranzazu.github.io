@@ -1,11 +1,17 @@
 ---
-import content from "../data/content.json";
-const { nav: links, profile } = content;
+import { getContent, langPaths, languages, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const { nav: links, profile } = getContent(lang);
+const otherLang: Lang = lang === "es" ? "en" : "es";
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/85 backdrop-blur-sm border-b border-[var(--color-border)]">
   <div class="max-w-5xl mx-auto px-6 sm:px-8 py-5 flex items-center justify-between">
-    <a href="#" class="text-sm font-medium tracking-tight text-[var(--color-ink)]">
+    <a href={langPaths[lang]} class="text-sm font-medium tracking-tight text-[var(--color-ink)]">
       {profile.name}
     </a>
     <ul class="hidden sm:flex items-center gap-8">
@@ -22,11 +28,20 @@ const { nav: links, profile } = content;
         ))
       }
     </ul>
-    <a
-      href="#contacto"
-      class="text-sm font-medium bg-[var(--color-accent)] text-white rounded-full px-4 py-1.5 hover:bg-[var(--color-accent-strong)] transition-colors"
-    >
-      Contacto
-    </a>
+    <div class="flex items-center gap-4">
+      <a
+        href={langPaths[otherLang]}
+        class="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] transition-colors"
+        aria-label={`Switch to ${languages[otherLang]}`}
+      >
+        {otherLang.toUpperCase()}
+      </a>
+      <a
+        href="#contacto"
+        class="text-sm font-medium bg-[var(--color-accent)] text-white rounded-full px-4 py-1.5 hover:bg-[var(--color-accent-strong)] transition-colors"
+      >
+        {lang === "es" ? "Contacto" : "Contact"}
+      </a>
+    </div>
   </div>
 </nav>

@@ -1,13 +1,19 @@
 ---
-import content from "../data/content.json";
-const { experience } = content;
+import { getContent, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const { experience, nav } = getContent(lang);
+const label = nav.find((l) => l.href === "#experiencia")?.label ?? "Experiencia";
 ---
 
 <section id="experiencia" class="max-w-5xl mx-auto px-6 sm:px-8 py-24 border-t border-[var(--color-border)]">
   <div class="grid sm:grid-cols-[200px_1fr] gap-8 sm:gap-16">
     <div class="flex items-center gap-2 h-fit">
       <span class="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
-      <h2 class="text-sm text-[var(--color-ink)] font-medium">Experiencia</h2>
+      <h2 class="text-sm text-[var(--color-ink)] font-medium">{label}</h2>
     </div>
     <div class="flex flex-col gap-12 max-w-2xl">
       {

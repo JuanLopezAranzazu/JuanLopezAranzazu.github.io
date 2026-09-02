@@ -1,6 +1,12 @@
 ---
-import content from "../data/content.json";
-const { contact, profile } = content;
+import { getContent, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const { contact, profile } = getContent(lang);
+const madeWith = lang === "es" ? "Hecho con Astro + Tailwind." : "Made with Astro + Tailwind.";
 ---
 
 <section id="contacto" class="max-w-5xl mx-auto px-6 sm:px-8 py-32 border-t border-[var(--color-border)]">
@@ -16,6 +22,8 @@ const { contact, profile } = content;
         contact.socials.map((s, i) => (
           <a
             href={s.href}
+            target={s.href.startsWith("http") ? "_blank" : undefined}
+            rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
             class={`text-sm font-medium rounded-full px-4 py-2 transition-colors ${
               i === 0
                 ? "bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-strong)]"
@@ -32,6 +40,6 @@ const { contact, profile } = content;
 
 <footer class="max-w-5xl mx-auto px-6 sm:px-8 pb-10">
   <p class="text-sm text-[var(--color-ink-muted)]">
-    © {new Date().getFullYear()} {profile.name}. Hecho con Astro + Tailwind.
+    © {new Date().getFullYear()} {profile.name}. {madeWith}
   </p>
 </footer>

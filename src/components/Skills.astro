@@ -1,15 +1,21 @@
 ---
-import content from "../data/content.json";
-const { skills: skillGroups } = content;
+import { getContent, type Lang } from "../i18n/content";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const { skills: skillGroups, nav } = getContent(lang);
+const label = nav.find((l) => l.href === "#skills")?.label ?? "Skills";
 ---
 
 <section id="skills" class="max-w-5xl mx-auto px-6 sm:px-8 py-24 border-t border-[var(--color-border)]">
   <div class="grid sm:grid-cols-[200px_1fr] gap-8 sm:gap-16">
     <div class="flex items-center gap-2 h-fit">
       <span class="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
-      <h2 class="text-sm text-[var(--color-ink)] font-medium">Skills</h2>
+      <h2 class="text-sm text-[var(--color-ink)] font-medium">{label}</h2>
     </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 max-w-2xl">
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-10 max-w-2xl">
       {
         skillGroups.map((group) => (
           <div>

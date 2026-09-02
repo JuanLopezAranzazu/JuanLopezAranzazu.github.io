@@ -1,0 +1,114 @@
+{
+  "profile": {
+    "name": "Juan Lopez",
+    "role": "Systems Engineering Student & Software Developer",
+    "greeting": "Hi, I'm",
+    "tagline": "I build web applications and software solutions, with a special interest in artificial intelligence, backend development, and cloud technologies.",
+    "about": [
+      "I'm a Systems Engineering student at Universidad del Valle, interested in software development, artificial intelligence, and building applications that solve real problems.",
+      "I've worked on academic and personal projects using technologies like TypeScript, React, Angular, Node.js, Python, FastAPI, PostgreSQL, Docker, and AWS. I'm currently also exploring generative AI applications and RAG-based systems.",
+      "I enjoy learning new technologies by building projects and following good practices in architecture, testing, automation, and deployment."
+    ]
+  },
+
+  "nav": [
+    { "href": "#about", "label": "About" },
+    { "href": "#proyectos", "label": "Projects" },
+    { "href": "#skills", "label": "Skills" },
+    { "href": "#experiencia", "label": "Experience" },
+    { "href": "#educacion", "label": "Education" }
+  ],
+
+  "projects": [
+    {
+      "title": "Codelabs — Software Development",
+      "description": "Collection of academic projects focused on backend development with Java, REST APIs, automated testing, and microservices-based architectures.",
+      "tags": ["Java", "Spring Boot", "REST API", "JUnit", "Microservices", "Eureka", "RabbitMQ"],
+      "link": "https://github.com/JuanLopezAranzazu/codelabs-ds3"
+    },
+    {
+      "title": "Codelabs — Capstone Project (Core)",
+      "description": "Collection of academic projects developed with Python, exploring API development, artificial intelligence, computer vision, and automation.",
+      "tags": ["Python", "FastAPI", "REST API", "YOLO", "Computer Vision", "Web Scraping"],
+      "link": "https://github.com/JuanLopezAranzazu/codelabs-proyecto-integrador2-obligatorios"
+    },
+    {
+      "title": "Codelabs — Capstone Project (Electives)",
+      "description": "Collection of complementary projects developed to explore different Python tools and technologies.",
+      "tags": ["Python", "FastAPI", "REST API", "YOLO", "Computer Vision", "Web Scraping"],
+      "link": "https://github.com/JuanLopezAranzazu/codelabs-proyecto-integrador2-opcionales"
+    },
+    {
+      "title": "IoT Environmental Monitoring",
+      "description": "Environmental monitoring system built with ESP32-S3 that collects sensor data and transmits it via MQTT. The solution uses EMQX as the broker, Node.js for processing, and a Telegram bot to query and receive system information.",
+      "tags": ["ESP32-S3", "MQTT", "EMQX", "Node.js", "Telegram"],
+      "link": "https://github.com/JuanLopezAranzazu/proyecto-integrador2-iot-bot"
+    },
+    {
+      "title": "freeCodeCamp — Backend & APIs",
+      "description": "Collection of projects built during backend development training, covering REST APIs and web services with Node.js and Express.",
+      "tags": ["JavaScript", "Node.js", "Express", "REST API"],
+      "link": "https://github.com/JuanLopezAranzazu/back-end-development-and-apis"
+    },
+    {
+      "title": "freeCodeCamp — Web & Databases",
+      "description": "Collection of projects focused on web development with HTML, CSS, and JavaScript, along with relational database and SQL projects.",
+      "tags": ["HTML", "CSS", "JavaScript", "SQL", "Databases"],
+      "link": "https://github.com/JuanLopezAranzazu/freecodecamp-projects"
+    }
+  ],
+
+  "skills": [
+    { "category": "Languages", "items": ["TypeScript", "JavaScript", "Python", "Java", "C++"] },
+    { "category": "Frontend", "items": ["React", "Angular", "Next.js", "Vue.js", "Astro", "TailwindCSS"] },
+    { "category": "Backend", "items": ["Node.js", "Express", "Spring Boot", "FastAPI", "Flask"] },
+    { "category": "Databases", "items": ["PostgreSQL", "MySQL", "MongoDB", "SQLite"] },
+    { "category": "Tools", "items": ["Git", "Docker", "AWS", "GitHub Actions", "Postman", "VS Code", "Intellij IDEA"] }
+  ],
+
+  "experience": [
+    {
+      "role": "Intern",
+      "company": "OL Software",
+      "period": "Apr 2022 - Sep 2022",
+      "description": "Contributed to the development of a web application for employee management and HR processes."
+    },
+    {
+      "role": "Systems Engineering Student",
+      "company": "Universidad del Valle",
+      "period": "Present",
+      "description": "Training in software engineering, application development, databases, artificial intelligence, software architecture, and infrastructure technologies."
+    },
+    {
+      "role": "Undergraduate Thesis Project",
+      "company": "Universidad del Valle",
+      "period": "Present",
+      "description": "Developing an AI-powered tool based on generative AI to personalize the learning of functional programming."
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Associate Degree in Information Systems",
+      "institution": "Universidad del Valle",
+      "period": "Feb 2019 — Dec 2022",
+      "description": "Training in software development, databases, information systems, and software engineering fundamentals."
+    },
+    {
+      "degree": "Systems Engineering",
+      "institution": "Universidad del Valle",
+      "period": "Aug 2023 — Present",
+      "description": "Professional training focused on software development, systems architecture, artificial intelligence, and information technologies."
+    }
+  ],
+
+  "contact": {
+    "heading": "Let's talk.",
+    "text": "Have a project, an idea, or just want to connect? You can find me on GitHub or LinkedIn.",
+    "socials": [
+      { "label": "Email", "href": "mailto:juanlopezaranzazu@gmail.com" },
+      { "label": "GitHub", "href": "https://github.com/JuanLopezAranzazu" },
+      { "label": "LinkedIn", "href": "https://linkedin.com/in/juan-esteban-lópez-aránzazu-691589187/" }
+    ]
+  }
+}

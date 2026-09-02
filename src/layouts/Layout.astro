@@ -1,27 +1,29 @@
 ---
 import "../styles/global.css";
 
-import content from "../data/content.json";
+import { getContent, type Lang } from "../i18n/content";
 
 interface Props {
+  lang: Lang;
   title?: string;
   description?: string;
 }
 
-const {
-  title = `${content.profile.name} — Portfolio`,
-  description = content.profile.tagline,
-} = Astro.props;
+const { lang, title, description } = Astro.props;
+const content = getContent(lang);
+
+const finalTitle = title ?? `${content.profile.name} — Portfolio`;
+const finalDescription = description ?? content.profile.tagline;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="description" content={description} />
-    <title>{title}</title>
+    <meta name="description" content={finalDescription} />
+    <title>{finalTitle}</title>
   </head>
   <body class="bg-[var(--color-bg)] text-[var(--color-ink)] antialiased">
     <slot />

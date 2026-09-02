@@ -7,16 +7,18 @@ import Skills from "../components/Skills.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/Education.astro";
 import Contact from "../components/Contact.astro";
+
+const lang = "es" as const;
 ---
 
-<Layout>
-  <Nav />
+<Layout lang={lang}>
+  <Nav lang={lang} />
   <main>
-    <Hero />
-    <Projects />
-    <Skills />
-    <Experience />
-    <Education />
-    <Contact />
+    <Hero lang={lang} />
+    <Projects lang={lang} />
+    <Skills lang={lang} />
+    <Experience lang={lang} />
+    <Education lang={lang} />
+    <Contact lang={lang} />
   </main>
 </Layout>
