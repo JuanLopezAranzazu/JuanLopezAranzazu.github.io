@@ -1,14 +1,16 @@
 # Portfolio Personal
 
-Portfolio personal construido con [Astro](https://astro.build) + [TailwindCSS](https://tailwindcss.com), contenido separado en JSON y soporte multi-idioma (ES/EN).
+Portfolio personal construido con [Astro](https://astro.build) + [TailwindCSS](https://tailwindcss.com), contenido separado en JSON y soporte multi-idioma (ES/EN). Incluye iconos con [Lucide](https://lucide.dev) y animaciones con [GSAP](https://gsap.com).
 
 El sitio es estático y se despliega automáticamente en **GitHub Pages** mediante GitHub Actions.
 
 ## Stack
 
-- **Astro** — sitio estático, cero JS por defecto
+- **Astro** — sitio estático, JS solo para las animaciones
 - **TailwindCSS** — utility classes
-- **TypeScript** — tipado en el helper de i18n
+- **TypeScript** — tipado en el helper de i18n y en el script de animaciones
+- **@lucide/astro** — iconos SVG como componentes de Astro
+- **GSAP** (+ ScrollTrigger) — animaciones de entrada y de scroll
 - **pnpm** — gestor de paquetes
 - **GitHub Pages** — hosting del sitio
 - **GitHub Actions** — CI/CD para el despliegue
@@ -23,15 +25,22 @@ src/
 ├── i18n/
 │   └── content.ts            # getContent(lang), langPaths, tipos
 ├── layouts/
-│   └── Layout.astro          # <head>, meta tags, Open Graph, hreflang
+│   └── Layout.astro          # <head>, meta tags, Open Graph, hreflang, carga de animaciones
 ├── components/
-│   ├── Nav.astro
+│   ├── icons/
+│   │   ├── Github.astro      # Icono de marca (Lucide 1.x ya no los incluye)
+│   │   ├── Linkedin.astro    # Icono de marca
+│   │   └── social.ts         # socialIcon(label): elige el icono de cada red social
+│   ├── SectionHeading.astro  # Encabezado de sección con icono
+│   ├── Nav.astro             # Navegación + barra de progreso de lectura
 │   ├── Hero.astro            # Hero + about
 │   ├── Projects.astro
 │   ├── Skills.astro
 │   ├── Experience.astro
 │   ├── Education.astro
 │   └── Contact.astro
+├── scripts/
+│   └── animations.ts         # Toda la lógica de GSAP
 ├── pages/
 │   ├── index.astro           # Sitio en español → /
 │   └── en/
@@ -153,15 +162,16 @@ Ejemplo:
 }
 ```
 
-| Variable                | Uso                                 |
-| :---------------------- | :---------------------------------- |
-| `--color-bg`            | Fondo general                       |
-| `--color-ink`           | Texto principal                     |
-| `--color-ink-muted`     | Texto secundario                    |
-| `--color-accent`        | Links, botones y títulos de sección |
-| `--color-accent-strong` | Hover de botones sólidos            |
-| `--color-accent-warm`   | Fechas, categorías y detalles       |
-| `--color-border`        | Líneas divisorias                   |
+| Variable                | Uso                                          |
+| :---------------------- | :------------------------------------------- |
+| `--color-bg`            | Fondo general                                |
+| `--color-ink`           | Texto principal                              |
+| `--color-ink-muted`     | Texto secundario                             |
+| `--color-accent`        | Links, botones, iconos y títulos de sección  |
+| `--color-accent-soft`   | Fondo de etiquetas e insignias de iconos     |
+| `--color-accent-strong` | Hover de botones sólidos                     |
+| `--color-accent-warm`   | Fechas, categorías y detalles                |
+| `--color-border`        | Líneas divisorias                            |
 
 Para cambiar la paleta del portfolio, modifica únicamente las variables en `src/styles/global.css`.
 
