@@ -7,12 +7,18 @@ settings:
 importers:
   .:
     dependencies:
+      "@lucide/astro":
+        specifier: ^1.48.0
+        version: 1.48.0(astro@7.2.10(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(jiti@2.7.0))
       "@tailwindcss/vite":
         specifier: ^4.3.3
         version: 4.3.3(vite@8.2.2(esbuild@0.28.2)(jiti@2.7.0))
       astro:
         specifier: ^7.2.10
         version: 7.2.10(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(jiti@2.7.0)
+      gsap:
+        specifier: ^3.15.0
+        version: 3.15.0
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
@@ -782,6 +788,14 @@ packages:
       {
         integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==,
       }
+
+  "@lucide/astro@1.48.0":
+    resolution:
+      {
+        integrity: sha512-BL+7lLGjjSTfdYEBd9pAB0ixhJ7M84OVzxHoY3oG3M92kX/q1UG2+znp+pqH3waxpIHF1l8Hd1QZxytqv5WH8A==,
+      }
+    peerDependencies:
+      astro: ^4 || ^5 || ^6 || ^7
 
   "@napi-rs/wasm-runtime@1.2.3":
     resolution:
@@ -1560,6 +1574,12 @@ packages:
     resolution:
       {
         integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==,
+      }
+
+  gsap@3.15.0:
+    resolution:
+      {
+        integrity: sha512-dMW4CWBTUK1AEEDeZc1g4xpPGIrSf9fJF960qbTZmN/QwZIWY5wgliS6JWl9/25fpTGJrMRtSjGtOmPnfjZB+A==,
       }
 
   h3@1.15.11:
@@ -2915,6 +2935,10 @@ snapshots:
       "@jridgewell/resolve-uri": 3.1.2
       "@jridgewell/sourcemap-codec": 1.6.0
 
+  "@lucide/astro@1.48.0(astro@7.2.10(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(jiti@2.7.0))":
+    dependencies:
+      astro: 7.2.10(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(jiti@2.7.0)
+
   "@napi-rs/wasm-runtime@1.2.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)":
     dependencies:
       "@emnapi/core": 1.11.1
@@ -3393,6 +3417,8 @@ snapshots:
   github-slugger@2.0.0: {}
 
   graceful-fs@4.2.11: {}
+
+  gsap@3.15.0: {}
 
   h3@1.15.11:
     dependencies:

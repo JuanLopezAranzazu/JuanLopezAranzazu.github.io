@@ -1,25 +1,60 @@
 ---
+import User from "@lucide/astro/icons/user";
 import { getContent, type Lang } from "../i18n/content";
+import SectionHeading from "./SectionHeading.astro";
+import { socialIcon } from "./icons/social";
 
 interface Props {
   lang: Lang;
 }
 const { lang } = Astro.props;
-const { profile } = getContent(lang);
+const { profile, contact } = getContent(lang);
 const aboutLabel = lang === "es" ? "Sobre mí" : "About me";
 ---
 
 <section class="max-w-5xl mx-auto px-6 sm:px-8 pt-40 pb-24">
-  <p class="text-sm text-[var(--color-accent-warm)] font-medium mb-6">
+  <p
+    data-hero="greeting"
+    class="text-sm text-[var(--color-accent-warm)] font-medium mb-6"
+  >
     {profile.greeting}
   </p>
   <h1 class="text-5xl sm:text-7xl font-medium tracking-tight leading-[1.05] mb-8 text-[var(--color-ink)]">
-    {profile.name}.<br />
-    <span class="text-[var(--color-accent)]">{profile.role}</span>
+    <span class="block overflow-hidden pb-[0.08em]">
+      <span data-hero="line" class="block">
+        {profile.name}.
+      </span>
+    </span>
+    <span class="block overflow-hidden pb-[0.08em]">
+      <span data-hero="line" class="block text-[var(--color-accent)]">
+        {profile.role}
+      </span>
+    </span>
   </h1>
-  <p class="text-lg text-[var(--color-ink-muted)] max-w-xl leading-relaxed">
+  <p
+    data-hero="tagline"
+    class="text-lg text-[var(--color-ink-muted)] max-w-xl leading-relaxed"
+  >
     {profile.tagline}
   </p>
+  <div class="flex items-center gap-3 mt-10">
+    {contact.socials.map((s) => {
+      const Icon = socialIcon(s.label);
+      const external = s.href.startsWith("http");
+      return (
+        <a
+          data-hero="social"
+          href={s.href}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+          aria-label={s.label}
+          class="grid place-items-center size-10 rounded-full border border-[var(--color-border)] text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
+        >
+          <Icon size={18} strokeWidth={1.75} />
+        </a>
+      );
+    })}
+  </div>
 </section>
 
 <section
@@ -27,13 +62,13 @@ const aboutLabel = lang === "es" ? "Sobre mí" : "About me";
   class="max-w-5xl mx-auto px-6 sm:px-8 py-24 border-t border-[var(--color-border)]"
 >
   <div class="grid sm:grid-cols-[200px_1fr] gap-8 sm:gap-16">
-    <div class="flex items-center gap-2 h-fit">
-      <span class="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
-      <h2 class="text-sm text-[var(--color-ink)] font-medium">{aboutLabel}</h2>
-    </div>
+    <SectionHeading label={aboutLabel} icon={User} />
     <div class="max-w-2xl">
       {profile.about.map((paragraph) => (
-        <p class="text-xl leading-relaxed text-[var(--color-ink)]/80 mt-6 first:mt-0">
+        <p
+          data-reveal
+          class="text-xl leading-relaxed text-[var(--color-ink)]/80 mt-6 first:mt-0"
+        >
           {paragraph}
         </p>
       ))}

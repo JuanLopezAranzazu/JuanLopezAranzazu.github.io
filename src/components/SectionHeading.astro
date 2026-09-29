@@ -1,0 +1,14 @@
+---
+interface Props {
+  label: string;
+  icon: any;
+}
+const { label, icon: Icon } = Astro.props;
+---
+
+<div class="flex items-center gap-3 h-fit" data-reveal>
+  <span class="grid place-items-center size-8 rounded-lg bg-[var(--color-accent-soft)] text-[var(--color-accent)] ring-1 ring-inset ring-[var(--color-accent)]/20">
+    <Icon size={16} strokeWidth={2} aria-hidden="true" />
+  </span>
+  <h2 class="text-sm text-[var(--color-ink)] font-medium">{label}</h2>
+</div>

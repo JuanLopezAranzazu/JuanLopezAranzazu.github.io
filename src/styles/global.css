@@ -18,3 +18,24 @@
 html {
   scroll-behavior: smooth;
 }
+
+.js [data-hero],
+.js [data-reveal] {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .js [data-hero],
+  .js [data-reveal] {
+    opacity: 1;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}

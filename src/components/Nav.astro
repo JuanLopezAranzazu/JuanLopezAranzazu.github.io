@@ -1,4 +1,6 @@
 ---
+import Languages from "@lucide/astro/icons/languages";
+import Mail from "@lucide/astro/icons/mail";
 import { getContent, langPaths, languages, type Lang } from "../i18n/content";
 
 interface Props {
@@ -32,17 +34,25 @@ const otherLang: Lang = lang === "es" ? "en" : "es";
     <div class="flex items-center gap-4">
       <a
         href={langPaths[otherLang]}
-        class="text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] transition-colors"
+        class="flex items-center gap-1.5 text-sm text-[var(--color-ink-muted)] hover:text-[var(--color-accent)] transition-colors"
         aria-label={`Switch to ${languages[otherLang]}`}
       >
+        <Languages size={16} aria-hidden="true" />
         {otherLang.toUpperCase()}
       </a>
       <a
         href="#contacto"
-        class="text-sm font-medium bg-[var(--color-accent)] text-white rounded-full px-4 py-1.5 hover:bg-[var(--color-accent-strong)] transition-colors"
+        class="flex items-center gap-1.5 text-sm font-medium bg-[var(--color-accent)] text-white rounded-full px-4 py-1.5 hover:bg-[var(--color-accent-strong)] transition-colors"
       >
+        <Mail size={14} aria-hidden="true" />
         {lang === "es" ? "Contacto" : "Contact"}
       </a>
     </div>
   </div>
+  <div
+    data-progress
+    aria-hidden="true"
+    class="absolute bottom-[-1px] left-0 h-px w-full bg-[var(--color-accent)]"
+    style="transform: scaleX(0); transform-origin: left center;"
+  ></div>
 </nav>

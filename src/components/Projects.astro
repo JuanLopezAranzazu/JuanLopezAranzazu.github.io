@@ -1,5 +1,8 @@
 ---
+import FolderGit2 from "@lucide/astro/icons/folder-git-2";
+import ArrowUpRight from "@lucide/astro/icons/arrow-up-right";
 import { getContent, type Lang } from "../i18n/content";
+import SectionHeading from "./SectionHeading.astro";
 
 interface Props {
   lang: Lang;
@@ -14,21 +17,26 @@ const label = nav.find((l) => l.href === "#proyectos")?.label ?? "Proyectos";
   class="max-w-5xl mx-auto px-6 sm:px-8 py-24 border-t border-[var(--color-border)]"
 >
   <div class="grid sm:grid-cols-[200px_1fr] gap-8 sm:gap-16">
-    <div class="flex items-center gap-2 h-fit">
-      <span class="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
-      <h2 class="text-sm text-[var(--color-ink)] font-medium">{label}</h2>
-    </div>
+    <SectionHeading label={label} icon={FolderGit2} />
     <div class="flex flex-col gap-16 max-w-2xl">
       {projects.map((project) => (
         <a
+          data-reveal
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
           class="group block border-l-2 border-[var(--color-border)] hover:border-[var(--color-accent)] pl-6 -ml-px transition-colors"
         >
-          <h3 class="text-2xl font-medium tracking-tight mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors">
-            {project.title}
-          </h3>
+          <div class="flex items-start justify-between gap-4 mb-2">
+            <h3 class="text-2xl font-medium tracking-tight text-[var(--color-ink)] group-hover:text-[var(--color-accent)] transition-colors">
+              {project.title}
+            </h3>
+            <ArrowUpRight
+              size={22}
+              class="shrink-0 mt-1.5 text-[var(--color-ink-muted)] transition-all duration-300 ease-out group-hover:text-[var(--color-accent)] group-hover:translate-x-1 group-hover:-translate-y-1 motion-reduce:transition-none"
+              aria-hidden="true"
+            />
+          </div>
           <p class="text-[var(--color-ink-muted)] leading-relaxed mb-4">
             {project.description}
           </p>
