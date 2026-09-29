@@ -6,12 +6,12 @@ El sitio es estático y se despliega automáticamente en **GitHub Pages** median
 
 ## Stack
 
-* **Astro** — sitio estático, cero JS por defecto
-* **TailwindCSS** — utility classes
-* **TypeScript** — tipado en el helper de i18n
-* **pnpm** — gestor de paquetes
-* **GitHub Pages** — hosting del sitio
-* **GitHub Actions** — CI/CD para el despliegue
+- **Astro** — sitio estático, cero JS por defecto
+- **TailwindCSS** — utility classes
+- **TypeScript** — tipado en el helper de i18n
+- **pnpm** — gestor de paquetes
+- **GitHub Pages** — hosting del sitio
+- **GitHub Actions** — CI/CD para el despliegue
 
 ## Estructura del proyecto
 
@@ -52,8 +52,8 @@ pnpm-lock.yaml
 
 Antes de ejecutar el proyecto localmente, asegúrate de tener instalado:
 
-* [Node.js](https://nodejs.org/)
-* [pnpm](https://pnpm.io/)
+- [Node.js](https://nodejs.org/)
+- [pnpm](https://pnpm.io/)
 
 Puedes verificar las versiones con:
 
@@ -90,8 +90,8 @@ pnpm build
 
 Todo el texto del sitio (nombre, bio, proyectos, skills, experiencia, educación y contacto) vive en:
 
-* `src/data/content.es.json`
-* `src/data/content.en.json`
+- `src/data/content.es.json`
+- `src/data/content.en.json`
 
 **No es necesario modificar los archivos `.astro`** para actualizar el contenido. Solo edita estos archivos JSON manteniendo la misma estructura de keys en ambos idiomas.
 
@@ -114,8 +114,8 @@ Agrega el proyecto en ambos archivos JSON:
 
 El sitio genera dos rutas estáticas:
 
-* `/` → español (idioma por defecto)
-* `/en/` → inglés
+- `/` → español (idioma por defecto)
+- `/en/` → inglés
 
 Cada página (`src/pages/index.astro` y `src/pages/en/index.astro`) utiliza los mismos componentes pasando la prop `lang`.
 
@@ -254,20 +254,20 @@ asegúrate de configurar correctamente `site` y `base` en `astro.config.mjs`.
 Por ejemplo:
 
 ```javascript
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://usuario.github.io',
-  base: '/nombre-del-repositorio',
+  site: "https://usuario.github.io",
+  base: "/nombre-del-repositorio",
 });
 ```
 
 Si el repositorio se llama `usuario.github.io`, no es necesario utilizar `base`:
 
 ```javascript
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: 'https://usuario.github.io',
+  site: "https://usuario.github.io",
 });
 ```

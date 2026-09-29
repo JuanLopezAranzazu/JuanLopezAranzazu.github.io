@@ -23,19 +23,41 @@
     {
       "title": "Codelabs — Software Development",
       "description": "Collection of academic projects focused on backend development with Java, REST APIs, automated testing, and microservices-based architectures.",
-      "tags": ["Java", "Spring Boot", "REST API", "JUnit", "Microservices", "Eureka", "RabbitMQ"],
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "REST API",
+        "JUnit",
+        "Microservices",
+        "Eureka",
+        "RabbitMQ"
+      ],
       "link": "https://github.com/JuanLopezAranzazu/codelabs-ds3"
     },
     {
       "title": "Codelabs — Capstone Project (Core)",
       "description": "Collection of academic projects developed with Python, exploring API development, artificial intelligence, computer vision, and automation.",
-      "tags": ["Python", "FastAPI", "REST API", "YOLO", "Computer Vision", "Web Scraping"],
+      "tags": [
+        "Python",
+        "FastAPI",
+        "REST API",
+        "YOLO",
+        "Computer Vision",
+        "Web Scraping"
+      ],
       "link": "https://github.com/JuanLopezAranzazu/codelabs-proyecto-integrador2-obligatorios"
     },
     {
       "title": "Codelabs — Capstone Project (Electives)",
       "description": "Collection of complementary projects developed to explore different Python tools and technologies.",
-      "tags": ["Python", "FastAPI", "REST API", "YOLO", "Computer Vision", "Web Scraping"],
+      "tags": [
+        "Python",
+        "FastAPI",
+        "REST API",
+        "YOLO",
+        "Computer Vision",
+        "Web Scraping"
+      ],
       "link": "https://github.com/JuanLopezAranzazu/codelabs-proyecto-integrador2-opcionales"
     },
     {
@@ -59,11 +81,34 @@
   ],
 
   "skills": [
-    { "category": "Languages", "items": ["TypeScript", "JavaScript", "Python", "Java", "C++"] },
-    { "category": "Frontend", "items": ["React", "Angular", "Next.js", "Vue.js", "Astro", "TailwindCSS"] },
-    { "category": "Backend", "items": ["Node.js", "Express", "Spring Boot", "FastAPI", "Flask"] },
-    { "category": "Databases", "items": ["PostgreSQL", "MySQL", "MongoDB", "SQLite"] },
-    { "category": "Tools", "items": ["Git", "Docker", "AWS", "GitHub Actions", "Postman", "VS Code", "Intellij IDEA"] }
+    {
+      "category": "Languages",
+      "items": ["TypeScript", "JavaScript", "Python", "Java", "C++"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["React", "Angular", "Next.js", "Vue.js", "Astro", "TailwindCSS"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express", "Spring Boot", "FastAPI", "Flask"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MySQL", "MongoDB", "SQLite"]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Git",
+        "Docker",
+        "AWS",
+        "GitHub Actions",
+        "Postman",
+        "VS Code",
+        "Intellij IDEA"
+      ]
+    }
   ],
 
   "experience": [
@@ -108,7 +153,10 @@
     "socials": [
       { "label": "Email", "href": "mailto:juanlopezaranzazu@gmail.com" },
       { "label": "GitHub", "href": "https://github.com/JuanLopezAranzazu" },
-      { "label": "LinkedIn", "href": "https://linkedin.com/in/juan-esteban-lópez-aránzazu-691589187/" }
+      {
+        "label": "LinkedIn",
+        "href": "https://linkedin.com/in/juan-esteban-lópez-aránzazu-691589187/"
+      }
     ]
   }
 }
